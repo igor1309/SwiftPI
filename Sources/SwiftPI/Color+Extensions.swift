@@ -12,7 +12,7 @@ import UIKit
 import SwiftUI
 
 @available(iOS 13, *)
-extension Color {
+public extension Color {
     public static var lightGray = Color(UIColor.lightGray)
     public static var darkGray = Color(UIColor.darkGray)
     

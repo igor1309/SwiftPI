@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension TimeInterval {
+public extension TimeInterval {
     var formatMinuteSecond: String {
         let formatter = DateComponentsFormatter()
         formatter.unitsStyle = .positional
