@@ -32,5 +32,7 @@ public extension Color {
     static var systemRed = Color(UIColor.systemRed)
     static var systemTeal = Color(UIColor.systemTeal)
     static var systemYellow = Color(UIColor.systemYellow)
+    
+    static var systemBackground = Color(UIColor.systemBackground)
 }
 #endif
