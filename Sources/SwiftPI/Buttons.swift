@@ -16,6 +16,12 @@ public struct TrailingToggle: View {
     var iconOn: String = "text.bubble"
     var iconOff: String = "text.bubble.fill"
     
+    public init(isOn: Binding<Bool>, iconOn: String = "text.bubble", iconOff: String = "text.bubble.fill") {
+        self._isOn = isOn
+        self.iconOn = iconOn
+        self.iconOff = iconOff
+    }
+    
     public var body: some View {
         TrailingButtonSFSymbol(isOn ? iconOn : iconOff) {
             self.isOn.toggle()
@@ -25,12 +31,12 @@ public struct TrailingToggle: View {
 
 
 /**
-Button with nice `padding` (EdgeInsets) for `trailing` location inside `navigationBarItems`. It has a name and `closure` to perform.
-
-- Parameters:
-    - name: name of the Button
-    - closure: closure to perform
-*/
+ Button with nice `padding` (EdgeInsets) for `trailing` location inside `navigationBarItems`. It has a name and `closure` to perform.
+ 
+ - Parameters:
+ - name: name of the Button
+ - closure: closure to perform
+ */
 @available(iOS 13, *)
 public struct TrailingButton: View {
     @Environment(\.presentationMode) var presentation
@@ -132,7 +138,7 @@ public extension LeadingButtonSFSymbol {
         self.systemName = systemName
         self.closure = closure
     }
-
+    
 }
 
 #endif
