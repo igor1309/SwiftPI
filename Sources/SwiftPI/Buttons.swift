@@ -16,7 +16,7 @@ public struct TrailingToggle: View {
     var iconOn: String = "text.bubble"
     var iconOff: String = "text.bubble.fill"
     
-    var body: some View {
+    public var body: some View {
         TrailingButtonSFSymbol(isOn ? iconOn : iconOff) {
             self.isOn.toggle()
         }
@@ -37,7 +37,7 @@ public struct TrailingButton: View {
     var name: String
     var closure: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             self.closure()
         }) {
@@ -67,7 +67,7 @@ public struct LeadingButton: View {
     var name: String
     var closure: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             self.closure()
         }) {
@@ -91,7 +91,7 @@ public struct TrailingButtonSFSymbol: View {
     var systemName: String
     var closure: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             self.closure()
         }) {
@@ -116,7 +116,7 @@ public struct LeadingButtonSFSymbol: View {
     var systemName: String
     var closure: () -> Void
     
-    var body: some View {
+    public var body: some View {
         Button(action: {
             self.closure()
         }) {
