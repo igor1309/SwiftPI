@@ -11,7 +11,7 @@ import UIKit
 
 import SwiftUI
 
-@available(OSX 10.15, *)
+@available(iOS 13, *)
 extension Color {
     public static var lightGray = Color(UIColor.lightGray)
     public static var darkGray = Color(UIColor.darkGray)
