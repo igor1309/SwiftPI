@@ -1,3 +1,3 @@
 # SwiftPI
 
-A description of this package.
+Extensions and structs I use often.
