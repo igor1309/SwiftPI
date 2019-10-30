@@ -7,6 +7,17 @@
 
 import Foundation
 
+/// concatenate array of strings to one string with ", " as divider
+/// https://www.hackingwithswift.com/example-code/system/how-to-join-an-array-of-strings-in-a-natural-way
+public func stringFromArray(_ array: [String]) -> String {
+    array.joined(separator: ", ")
+}
+
+public func randomString(length: Int) -> String {
+    let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return String((0..<length).map{ _ in letters.randomElement()! })
+}
+
 public extension String {
     func removingPrefix(_ prefix: String) -> String {
         guard hasPrefix(prefix) else { return self }

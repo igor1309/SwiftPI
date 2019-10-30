@@ -8,7 +8,6 @@
 
 #if !os(macOS)
 import UIKit
-
 import SwiftUI
 
 @available(iOS 13, *)
