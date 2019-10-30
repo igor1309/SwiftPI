@@ -6,8 +6,11 @@
 //  Copyright © 2019 Igor Malyarov. All rights reserved.
 //
 
+#if !os(macOS)
+
 import SwiftUI
 
+@available(iOS 13, *)
 public struct TrailingToggle: View {
     @Binding var isOn: Bool
     var iconOn: String = "text.bubble"
@@ -28,6 +31,7 @@ Button with nice `padding` (EdgeInsets) for `trailing` location inside `navigati
     - name: name of the Button
     - closure: closure to perform
 */
+@available(iOS 13, *)
 public struct TrailingButton: View {
     @Environment(\.presentationMode) var presentation
     var name: String
@@ -43,6 +47,7 @@ public struct TrailingButton: View {
     }
 }
 
+@available(iOS 13, *)
 public extension TrailingButton {
     init(_ name: String, closure: @escaping () -> Void) {
         self.name = name
@@ -56,6 +61,7 @@ public extension TrailingButton {
 /// - Parameters:
 ///     - name: name of the Button
 ///     - closure: closure to perform
+@available(iOS 13, *)
 public struct LeadingButton: View {
     @Environment(\.presentationMode) var presentation
     var name: String
@@ -71,6 +77,7 @@ public struct LeadingButton: View {
     }
 }
 
+@available(iOS 13, *)
 public extension LeadingButton {
     init(_ name: String, closure: @escaping () -> Void) {
         self.name = name
@@ -78,6 +85,7 @@ public extension LeadingButton {
     }
 }
 
+@available(iOS 13, *)
 public struct TrailingButtonSFSymbol: View {
     @Environment(\.presentationMode) var presentation
     var systemName: String
@@ -93,6 +101,7 @@ public struct TrailingButtonSFSymbol: View {
     }
 }
 
+@available(iOS 13, *)
 public extension TrailingButtonSFSymbol {
     init(_ systemName: String, closure: @escaping () -> Void) {
         self.systemName = systemName
@@ -100,6 +109,8 @@ public extension TrailingButtonSFSymbol {
     }
 }
 
+
+@available(iOS 13, *)
 public struct LeadingButtonSFSymbol: View {
     @Environment(\.presentationMode) var presentation
     var systemName: String
@@ -115,6 +126,7 @@ public struct LeadingButtonSFSymbol: View {
     }
 }
 
+@available(iOS 13, *)
 public extension LeadingButtonSFSymbol {
     init(_ systemName: String, closure: @escaping () -> Void) {
         self.systemName = systemName
@@ -122,3 +134,5 @@ public extension LeadingButtonSFSymbol {
     }
 
 }
+
+#endif
