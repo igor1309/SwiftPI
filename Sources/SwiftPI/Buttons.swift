@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TrailingToggle: View {
+public struct TrailingToggle: View {
     @Binding var isOn: Bool
     var iconOn: String = "text.bubble"
     var iconOff: String = "text.bubble.fill"
@@ -28,7 +28,7 @@ Button with nice `padding` (EdgeInsets) for `trailing` location inside `navigati
     - name: name of the Button
     - closure: closure to perform
 */
-struct TrailingButton: View {
+public struct TrailingButton: View {
     @Environment(\.presentationMode) var presentation
     var name: String
     var closure: () -> Void
@@ -43,7 +43,7 @@ struct TrailingButton: View {
     }
 }
 
-extension TrailingButton {
+public extension TrailingButton {
     init(_ name: String, closure: @escaping () -> Void) {
         self.name = name
         self.closure = closure
@@ -56,7 +56,7 @@ extension TrailingButton {
 /// - Parameters:
 ///     - name: name of the Button
 ///     - closure: closure to perform
-struct LeadingButton: View {
+public struct LeadingButton: View {
     @Environment(\.presentationMode) var presentation
     var name: String
     var closure: () -> Void
@@ -71,14 +71,14 @@ struct LeadingButton: View {
     }
 }
 
-extension LeadingButton {
+public extension LeadingButton {
     init(_ name: String, closure: @escaping () -> Void) {
         self.name = name
         self.closure = closure
     }
 }
 
-struct TrailingButtonSFSymbol: View {
+public struct TrailingButtonSFSymbol: View {
     @Environment(\.presentationMode) var presentation
     var systemName: String
     var closure: () -> Void
@@ -93,14 +93,14 @@ struct TrailingButtonSFSymbol: View {
     }
 }
 
-extension TrailingButtonSFSymbol {
+public extension TrailingButtonSFSymbol {
     init(_ systemName: String, closure: @escaping () -> Void) {
         self.systemName = systemName
         self.closure = closure
     }
 }
 
-struct LeadingButtonSFSymbol: View {
+public struct LeadingButtonSFSymbol: View {
     @Environment(\.presentationMode) var presentation
     var systemName: String
     var closure: () -> Void
@@ -115,7 +115,7 @@ struct LeadingButtonSFSymbol: View {
     }
 }
 
-extension LeadingButtonSFSymbol {
+public extension LeadingButtonSFSymbol {
     init(_ systemName: String, closure: @escaping () -> Void) {
         self.systemName = systemName
         self.closure = closure
