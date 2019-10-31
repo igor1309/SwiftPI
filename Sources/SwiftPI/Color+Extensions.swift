@@ -6,7 +6,6 @@
 //  Copyright © 2019 Igor Malyarov. All rights reserved.
 //
 
-
 #if !os(macOS)
 import UIKit
 import SwiftUI

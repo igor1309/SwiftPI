@@ -6,6 +6,7 @@
 //  Copyright © 2019 Igor Malyarov. All rights reserved.
 //
 
+#if !os(macOS)
 import UIKit
 import SwiftUI
 
@@ -21,3 +22,4 @@ public extension Font {
 //    static var title3 = Font.system(size: 20)
 //    static var caption2 = Font.system(size: 10)
 }
+#endif

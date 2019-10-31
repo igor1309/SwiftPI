@@ -6,6 +6,7 @@
 //  Copyright © 2019 Igor Malyarov. All rights reserved.
 //
 
+#if !os(macOS)
 import SwiftUI
 
 /// https://mecid.github.io/2019/10/09/dynamic-type-in-swiftui/
@@ -29,3 +30,4 @@ public extension Group where Content: View {
         ModifiedContent(content: self, modifier: EmbedInStack())
     }
 }
+#endif
