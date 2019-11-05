@@ -8,7 +8,7 @@
 
 import Foundation
 
-func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
+public func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil) else {
@@ -35,7 +35,7 @@ func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
     }
 }
 
-func loadFromDocDir<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
+public func loadFromDocDir<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
     let data: Data
     
     if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -64,7 +64,7 @@ func loadFromDocDir<T: Decodable>(_ filename: String, as type: T.Type = T.self) 
     }
 }
 
-func saveJSON<T: Codable>(data: T, filename: String) {
+public func saveJSON<T: Codable>(data: T, filename: String) {
     let encoder = JSONEncoder()
     encoder.outputFormatting = .prettyPrinted
     
