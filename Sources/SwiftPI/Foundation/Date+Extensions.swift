@@ -47,6 +47,13 @@ public extension Date {
         return Calendar.current.date(byAdding: components, to: self)!
     }
     
+    func addMonths(_ numMonths: Int) -> Date {
+        var components = DateComponents()
+        components.month = numMonths
+        
+        return Calendar.current.date(byAdding: components, to: self)!
+    }
+    
     var startOfDay: Date {
         return Calendar.current.startOfDay(for: self)
     }
