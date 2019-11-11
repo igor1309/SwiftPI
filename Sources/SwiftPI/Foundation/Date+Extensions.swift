@@ -9,10 +9,10 @@ import Foundation
 
 public extension Date {
     
-    var isWeekend: Bool {
+//    var isWeekend: Bool {
         // MARK:- ДОДЕЛАТЬ!!
-        return false
-    }
+//        return false
+//    }
     
     
     var nextWeekStartRU: Date {
@@ -64,6 +64,7 @@ public extension Date {
         components.day = 1
         return cal.date(byAdding: components, to: self.startOfDay)!.addingTimeInterval(-1)
     }
+    
     func daysBetween(_ date: Date) -> Int {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day], from: self.startOfDay, to: date.startOfDay)
