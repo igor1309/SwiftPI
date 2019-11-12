@@ -19,9 +19,9 @@ public func dateIntervals(of component: Calendar.Component = .weekOfYear, startD
     while date <= endDate {
         let interval = calendar.dateInterval(of: component, for: date)!
         intervals.append(interval)
-        print(interval.end)
+//        print(interval.end)
         date = interval.end + 1
-        print(date)
+//        print(date)
     }
     return intervals
 }

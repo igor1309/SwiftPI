@@ -43,5 +43,6 @@ public extension Color {
     static var systemYellow = Color(UIColor.systemYellow)
     
     static var systemBackground = Color(UIColor.systemBackground)
+    static var secondarySystemBackground = Color(UIColor.secondarySystemBackground)
 }
 #endif
