@@ -22,6 +22,10 @@ public extension Color {
 
 @available(iOS 13, *)
 public extension Color {
+    static var tertiary = Color(UIColor.tertiaryLabel)
+    
+    static var systemFill = Color(UIColor.systemFill)
+
     static var lightGray = Color(UIColor.lightGray)
     static var darkGray = Color(UIColor.darkGray)
     
