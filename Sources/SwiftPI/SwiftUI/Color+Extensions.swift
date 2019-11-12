@@ -44,5 +44,10 @@ public extension Color {
     
     static var systemBackground = Color(UIColor.systemBackground)
     static var secondarySystemBackground = Color(UIColor.secondarySystemBackground)
+    static var tertiarySystemBackground = Color(UIColor.tertiarySystemBackground)
+    
+    static var systemGroupedBackground = Color(UIColor.systemGroupedBackground)
+    static var secondarySystemGroupedBackground = Color(UIColor.secondarySystemGroupedBackground)
+    static var tertiarySystemGroupedBackground = Color(UIColor.tertiarySystemGroupedBackground)
 }
 #endif
