@@ -25,6 +25,9 @@ public extension Color {
     static var tertiary = Color(UIColor.tertiaryLabel)
     
     static var systemFill = Color(UIColor.systemFill)
+    static var secondarySystemFill = Color(UIColor.secondarySystemFill)
+    static var tertiarySystemFill = Color(UIColor.tertiarySystemFill)
+    static var quaternarySystemFill = Color(UIColor.quaternarySystemFill)
 
     static var lightGray = Color(UIColor.lightGray)
     static var darkGray = Color(UIColor.darkGray)
