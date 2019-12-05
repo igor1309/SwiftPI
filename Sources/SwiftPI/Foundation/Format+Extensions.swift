@@ -17,6 +17,22 @@ public extension TimeInterval {
     }
 }
 
+extension Double {
+    public func format(percentage: Bool, decimals: Int) -> String {
+        let number = self.rounded(toPlaces: percentage ? decimals + 2 : decimals)
+        
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = decimals
+        formatter.maximumFractionDigits = decimals
+        formatter.usesGroupingSeparator = true
+        if percentage {
+            formatter.numberStyle = .percent
+        } else {
+            formatter.numberStyle = .decimal        }
+        
+        return formatter.string(for: number) ?? ""
+    }
+}
 
 public extension Double {
     /// Rounds the double to decimal places value
@@ -54,7 +70,7 @@ public extension Double {
     var threeSignificantDigits: String {
         
         if self == 0 {
-            return Formatter.groupedFormat.string(for: self) ?? "n/a"
+            return "0"
         }
         
         if self < 10 {
