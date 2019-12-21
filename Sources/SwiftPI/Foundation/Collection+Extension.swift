@@ -7,6 +7,13 @@
 
 import Foundation
 
+public extension Collection {
+    var isNotEmpty: Bool {
+        !isEmpty
+    }
+}
+
+
 //  as in macOS Catalina 10.15 Beta 5 Release Notes
 //  https://developer.apple.com/documentation/macos_release_notes/macos_catalina_10_15_beta_5_release_notes
 
