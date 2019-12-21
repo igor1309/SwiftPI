@@ -34,9 +34,3 @@ public extension String {
         return appending(suffix)
     }
 }
-
-public extension String {
-    var isNotEmpty: Bool {
-        !isEmpty
-    }
-}
