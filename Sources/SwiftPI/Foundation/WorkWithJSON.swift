@@ -35,39 +35,7 @@ public func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> 
     }
 }
 
-public func saveJSON<T: Codable>(data: T, filename: String) {
-    let encoder = JSONEncoder()
-    encoder.outputFormatting = .prettyPrinted
-    
-    let jsonData: Data
-    do {
-        jsonData = try encoder.encode(data)
-    }
-    catch {
-        return
-    }
-    
-    guard let jsonString = String(data: jsonData, encoding: .utf8) else {
-        print("error creating JSON string from data")
-        return
-    }
-    
-    if let dir = Bundle.main.url(forResource: filename, withExtension: nil) {
-        let fileURL = dir.appendingPathComponent(filename)
-        
-        print("fileURL: \(fileURL)")
-        
-        do {
-            try jsonString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
-        }
-        catch {
-            return
-        }
-    }
-    else { print("error getting Bundle Directory") }
-}
-
-public func loadFromDocDir<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
+public func loadJSONFromDocDir<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> T? {
     let data: Data
     
     if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
