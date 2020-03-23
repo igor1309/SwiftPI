@@ -44,7 +44,7 @@ public func loadJSONFromDocDir<T: Decodable>(_ filename: String, as type: T.Type
         do {
             data = try Data(contentsOf: file)
         } catch {
-            print("Couldn't load \(filename) from main bundle:\n\(error)")
+            print("Couldn't load \(filename) from Document Directory:\n\(error)")
             return nil
             //    fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
         }
