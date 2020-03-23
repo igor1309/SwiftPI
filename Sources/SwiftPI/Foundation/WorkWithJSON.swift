@@ -52,7 +52,7 @@ public func saveJSON<T: Codable>(data: T, filename: String) {
         return
     }
     
-    if let dir = Bundle.main.url(forResource: filename) {
+    if let dir = Bundle.main.url(forResource: filename, withExtension: nil) {
         let fileURL = dir.appendingPathComponent(filename)
         
         print("fileURL: \(fileURL)")
