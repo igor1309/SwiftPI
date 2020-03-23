@@ -22,7 +22,7 @@ public func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> 
     } catch {
         print("Couldn't load \(filename) from main bundle:\n\(error)")
         return nil
-        //    fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
+        //  fatalError("Couldn't load \(filename) from main bundle:\n\(error)")
     }
     
     do {
@@ -31,7 +31,7 @@ public func load<T: Decodable>(_ filename: String, as type: T.Type = T.self) -> 
     } catch {
         print("Couldn't parse \(filename) as \(T.self):\n\(error)")
         return nil
-        //    fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
+        //  fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
 
