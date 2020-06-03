@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(OSX 10.15, *)
 extension View {
     /// Returns a type-erased version of the view.
     public var typeErased: AnyView { AnyView(self) }

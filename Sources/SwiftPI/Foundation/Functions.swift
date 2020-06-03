@@ -12,6 +12,7 @@ import Foundation
 ///   - component: длина интервала (неделя по умолчанию)
 ///   - startDate: начальна дата, попадающая в первый интервал
 ///   - endDate: конечная дата, попадает в последний интервал
+@available(OSX 10.12, *)
 public func dateIntervals(of component: Calendar.Component = .weekOfYear, startDate: Date, endDate: Date) -> [DateInterval] {
     let calendar = Calendar.autoupdatingCurrent
     var intervals = [DateInterval]()
