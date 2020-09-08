@@ -16,7 +16,7 @@ public extension Font {
     static var title2 = Font(UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title2))
     static var title3 = Font(UIFont.preferredFont(forTextStyle: UIFont.TextStyle.title3))
     static var caption1 = Font(UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption1))
-    static var caption2 = Font(UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption2))
+//    static var caption2 = Font(UIFont.preferredFont(forTextStyle: UIFont.TextStyle.caption2))
 
 //    static var title2 = Font.system(size: 22)
 //    static var title3 = Font.system(size: 20)
